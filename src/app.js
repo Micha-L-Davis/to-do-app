@@ -85,12 +85,12 @@ function App() {
       <Form handleChange={handleChange} handleSubmit={handleSubmit} defaultValues={defaultValues} />
       {
         page > 0 &&
-        <Button icon='arrow-left' onClick={previousPage}>Prev</Button>
+        <Button icon='arrow-left' onClick={previousPage} data-testId='prev-button'> Prev</Button>
       }
       {
         list.length > settings.numToDisplay &&
         page < (list.length / settings.numToDisplay) - 1 &&
-        <Button rightIcon='arrow-right' onClick={advancePage}>Next</Button>
+        <Button rightIcon='arrow-right' onClick={advancePage} data-testId='next-button'>Next </Button>
       }
       <List list={paginateList(list)} />
     </>

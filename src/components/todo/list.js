@@ -4,7 +4,7 @@ const List = (props) => {
   return (
     props.list.map((item, index) => {
       return (
-        <div key={item.id}>
+        <div key={item.id} data-testId={`element-${index}`}>
           <p>{item.text}</p>
           <p><small>Assigned to: {item.assignee}</small></p>
           <p><small>Difficulty: {item.difficulty}</small></p>
